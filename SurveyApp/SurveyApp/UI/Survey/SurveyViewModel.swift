@@ -19,6 +19,7 @@ final class SurveyViewModel: ObservableObject {
     var maxRetries = 3
     
     @Published var questions: [Question] = []
+    @Published var questionsAnswered: [Int] = []
     
     @Published var errorCount = 0
     @Published var errorShown = false
@@ -50,6 +51,22 @@ final class SurveyViewModel: ObservableObject {
             let request = URLRequest(url: route)
             let data: [Question] = try await networkService.request(request)
             self.questions = data.sorted { $0.id < $1.id }
+            errorCount = 0
+        } catch {
+            errorCount += 1
+        }
+    }
+    
+    @MainActor
+    func submit(answer: Answer) async {
+        resetErrorCount()
+        
+        do {
+            let route = try QuestionsRoute.postQuestion(answer: answer).apiURL()
+            let request = URLRequest(url: route)
+            try await networkService.completableRequest(request)
+            questionsAnswered.append(answer.id)
+            errorCount = 0
         } catch {
             errorCount += 1
         }
