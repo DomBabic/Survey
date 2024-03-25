@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SurveyApp/SurveyApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SurveyAPI/SurveyAPI.xcodeproj">
    </FileRef>
    <FileRef
