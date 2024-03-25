@@ -18,6 +18,10 @@
 		B4E4F1FA2BB19FEC00CFC134 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1F92BB19FEC00CFC134 /* SurveyViewModel.swift */; };
 		B4E4F1FC2BB1A62200CFC134 /* SurveyAppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1FB2BB1A62200CFC134 /* SurveyAppRoute.swift */; };
 		B4E4F1FF2BB1A74100CFC134 /* View+NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1FE2BB1A74100CFC134 /* View+NavigationRoute.swift */; };
+		B4E4F2032BB1AD9D00CFC134 /* SurveyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F2012BB1AD9D00CFC134 /* SurveyAPI.framework */; };
+		B4E4F2042BB1AD9D00CFC134 /* SurveyAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F2012BB1AD9D00CFC134 /* SurveyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4E4F2052BB1AD9D00CFC134 /* SurveyData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F2022BB1AD9D00CFC134 /* SurveyData.framework */; };
+		B4E4F2062BB1AD9D00CFC134 /* SurveyData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F2022BB1AD9D00CFC134 /* SurveyData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B4E4F2072BB1AD9D00CFC134 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4E4F2062BB1AD9D00CFC134 /* SurveyData.framework in Embed Frameworks */,
+				B4E4F2042BB1AD9D00CFC134 /* SurveyAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B4E4F1BC2BB1978700CFC134 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E4F1BF2BB1978700CFC134 /* SurveyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApp.swift; sourceTree = "<group>"; };
@@ -52,6 +71,8 @@
 		B4E4F1F92BB19FEC00CFC134 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
 		B4E4F1FB2BB1A62200CFC134 /* SurveyAppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppRoute.swift; sourceTree = "<group>"; };
 		B4E4F1FE2BB1A74100CFC134 /* View+NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationRoute.swift"; sourceTree = "<group>"; };
+		B4E4F2012BB1AD9D00CFC134 /* SurveyAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SurveyAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E4F2022BB1AD9D00CFC134 /* SurveyData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SurveyData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E4F2052BB1AD9D00CFC134 /* SurveyData.framework in Frameworks */,
+				B4E4F2032BB1AD9D00CFC134 /* SurveyAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +109,7 @@
 				B4E4F1CF2BB1978800CFC134 /* SurveyAppTests */,
 				B4E4F1D92BB1978800CFC134 /* SurveyAppUITests */,
 				B4E4F1BD2BB1978700CFC134 /* Products */,
+				B4E4F2002BB1AD9D00CFC134 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +203,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B4E4F2002BB1AD9D00CFC134 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4E4F2012BB1AD9D00CFC134 /* SurveyAPI.framework */,
+				B4E4F2022BB1AD9D00CFC134 /* SurveyData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +222,7 @@
 				B4E4F1B82BB1978700CFC134 /* Sources */,
 				B4E4F1B92BB1978700CFC134 /* Frameworks */,
 				B4E4F1BA2BB1978700CFC134 /* Resources */,
+				B4E4F2072BB1AD9D00CFC134 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
