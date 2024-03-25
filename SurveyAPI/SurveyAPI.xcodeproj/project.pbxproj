@@ -7,179 +7,153 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4E4F1482BB1819D00CFC134 /* SurveyData.docc in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1472BB1819D00CFC134 /* SurveyData.docc */; };
-		B4E4F14E2BB1819D00CFC134 /* SurveyData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F1432BB1819D00CFC134 /* SurveyData.framework */; };
-		B4E4F1542BB1819D00CFC134 /* SurveyData.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E4F1462BB1819D00CFC134 /* SurveyData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4E4F15F2BB181C500CFC134 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F15E2BB181C500CFC134 /* Question.swift */; };
-		B4E4F1612BB1822400CFC134 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1602BB1822400CFC134 /* Answer.swift */; };
-		B4E4F1642BB1838100CFC134 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1632BB1838100CFC134 /* QuestionTests.swift */; };
-		B4E4F1662BB186B800CFC134 /* AnswerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1652BB186B800CFC134 /* AnswerTests.swift */; };
+		B4E4F1762BB187FF00CFC134 /* SurveyAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1752BB187FF00CFC134 /* SurveyAPI.docc */; };
+		B4E4F17C2BB1880000CFC134 /* SurveyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F1712BB187FF00CFC134 /* SurveyAPI.framework */; };
+		B4E4F1812BB1880000CFC134 /* SurveyAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1802BB1880000CFC134 /* SurveyAPITests.swift */; };
+		B4E4F1822BB1880000CFC134 /* SurveyAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E4F1742BB187FF00CFC134 /* SurveyAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B4E4F14F2BB1819D00CFC134 /* PBXContainerItemProxy */ = {
+		B4E4F17D2BB1880000CFC134 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B4E4F13A2BB1819D00CFC134 /* Project object */;
+			containerPortal = B4E4F1682BB187FF00CFC134 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B4E4F1422BB1819D00CFC134;
-			remoteInfo = SurveyData;
+			remoteGlobalIDString = B4E4F1702BB187FF00CFC134;
+			remoteInfo = SurveyAPI;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B4E4F1432BB1819D00CFC134 /* SurveyData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SurveyData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E4F1462BB1819D00CFC134 /* SurveyData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurveyData.h; sourceTree = "<group>"; };
-		B4E4F1472BB1819D00CFC134 /* SurveyData.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SurveyData.docc; sourceTree = "<group>"; };
-		B4E4F14D2BB1819D00CFC134 /* SurveyDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E4F15E2BB181C500CFC134 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		B4E4F1602BB1822400CFC134 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		B4E4F1632BB1838100CFC134 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
-		B4E4F1652BB186B800CFC134 /* AnswerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTests.swift; sourceTree = "<group>"; };
+		B4E4F1712BB187FF00CFC134 /* SurveyAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SurveyAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E4F1742BB187FF00CFC134 /* SurveyAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurveyAPI.h; sourceTree = "<group>"; };
+		B4E4F1752BB187FF00CFC134 /* SurveyAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SurveyAPI.docc; sourceTree = "<group>"; };
+		B4E4F17B2BB1880000CFC134 /* SurveyAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E4F1802BB1880000CFC134 /* SurveyAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B4E4F1402BB1819D00CFC134 /* Frameworks */ = {
+		B4E4F16E2BB187FF00CFC134 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4E4F14A2BB1819D00CFC134 /* Frameworks */ = {
+		B4E4F1782BB1880000CFC134 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E4F14E2BB1819D00CFC134 /* SurveyData.framework in Frameworks */,
+				B4E4F17C2BB1880000CFC134 /* SurveyAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B4E4F1392BB1819D00CFC134 = {
+		B4E4F1672BB187FF00CFC134 = {
 			isa = PBXGroup;
 			children = (
-				B4E4F1452BB1819D00CFC134 /* SurveyData */,
-				B4E4F1512BB1819D00CFC134 /* SurveyDataTests */,
-				B4E4F1442BB1819D00CFC134 /* Products */,
+				B4E4F1732BB187FF00CFC134 /* SurveyAPI */,
+				B4E4F17F2BB1880000CFC134 /* SurveyAPITests */,
+				B4E4F1722BB187FF00CFC134 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B4E4F1442BB1819D00CFC134 /* Products */ = {
+		B4E4F1722BB187FF00CFC134 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4E4F1432BB1819D00CFC134 /* SurveyData.framework */,
-				B4E4F14D2BB1819D00CFC134 /* SurveyDataTests.xctest */,
+				B4E4F1712BB187FF00CFC134 /* SurveyAPI.framework */,
+				B4E4F17B2BB1880000CFC134 /* SurveyAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4E4F1452BB1819D00CFC134 /* SurveyData */ = {
+		B4E4F1732BB187FF00CFC134 /* SurveyAPI */ = {
 			isa = PBXGroup;
 			children = (
-				B4E4F15D2BB181A700CFC134 /* Models */,
-				B4E4F1462BB1819D00CFC134 /* SurveyData.h */,
-				B4E4F1472BB1819D00CFC134 /* SurveyData.docc */,
+				B4E4F1742BB187FF00CFC134 /* SurveyAPI.h */,
+				B4E4F1752BB187FF00CFC134 /* SurveyAPI.docc */,
 			);
-			path = SurveyData;
+			path = SurveyAPI;
 			sourceTree = "<group>";
 		};
-		B4E4F1512BB1819D00CFC134 /* SurveyDataTests */ = {
+		B4E4F17F2BB1880000CFC134 /* SurveyAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				B4E4F1622BB1836E00CFC134 /* Models */,
+				B4E4F1802BB1880000CFC134 /* SurveyAPITests.swift */,
 			);
-			path = SurveyDataTests;
-			sourceTree = "<group>";
-		};
-		B4E4F15D2BB181A700CFC134 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B4E4F15E2BB181C500CFC134 /* Question.swift */,
-				B4E4F1602BB1822400CFC134 /* Answer.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B4E4F1622BB1836E00CFC134 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B4E4F1632BB1838100CFC134 /* QuestionTests.swift */,
-				B4E4F1652BB186B800CFC134 /* AnswerTests.swift */,
-			);
-			path = Models;
+			path = SurveyAPITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B4E4F13E2BB1819D00CFC134 /* Headers */ = {
+		B4E4F16C2BB187FF00CFC134 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E4F1542BB1819D00CFC134 /* SurveyData.h in Headers */,
+				B4E4F1822BB1880000CFC134 /* SurveyAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B4E4F1422BB1819D00CFC134 /* SurveyData */ = {
+		B4E4F1702BB187FF00CFC134 /* SurveyAPI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4E4F1572BB1819D00CFC134 /* Build configuration list for PBXNativeTarget "SurveyData" */;
+			buildConfigurationList = B4E4F1852BB1880000CFC134 /* Build configuration list for PBXNativeTarget "SurveyAPI" */;
 			buildPhases = (
-				B4E4F13E2BB1819D00CFC134 /* Headers */,
-				B4E4F13F2BB1819D00CFC134 /* Sources */,
-				B4E4F1402BB1819D00CFC134 /* Frameworks */,
-				B4E4F1412BB1819D00CFC134 /* Resources */,
+				B4E4F16C2BB187FF00CFC134 /* Headers */,
+				B4E4F16D2BB187FF00CFC134 /* Sources */,
+				B4E4F16E2BB187FF00CFC134 /* Frameworks */,
+				B4E4F16F2BB187FF00CFC134 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SurveyData;
-			productName = SurveyData;
-			productReference = B4E4F1432BB1819D00CFC134 /* SurveyData.framework */;
+			name = SurveyAPI;
+			productName = SurveyAPI;
+			productReference = B4E4F1712BB187FF00CFC134 /* SurveyAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B4E4F14C2BB1819D00CFC134 /* SurveyDataTests */ = {
+		B4E4F17A2BB1880000CFC134 /* SurveyAPITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4E4F15A2BB1819D00CFC134 /* Build configuration list for PBXNativeTarget "SurveyDataTests" */;
+			buildConfigurationList = B4E4F1882BB1880000CFC134 /* Build configuration list for PBXNativeTarget "SurveyAPITests" */;
 			buildPhases = (
-				B4E4F1492BB1819D00CFC134 /* Sources */,
-				B4E4F14A2BB1819D00CFC134 /* Frameworks */,
-				B4E4F14B2BB1819D00CFC134 /* Resources */,
+				B4E4F1772BB1880000CFC134 /* Sources */,
+				B4E4F1782BB1880000CFC134 /* Frameworks */,
+				B4E4F1792BB1880000CFC134 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B4E4F1502BB1819D00CFC134 /* PBXTargetDependency */,
+				B4E4F17E2BB1880000CFC134 /* PBXTargetDependency */,
 			);
-			name = SurveyDataTests;
-			productName = SurveyDataTests;
-			productReference = B4E4F14D2BB1819D00CFC134 /* SurveyDataTests.xctest */;
+			name = SurveyAPITests;
+			productName = SurveyAPITests;
+			productReference = B4E4F17B2BB1880000CFC134 /* SurveyAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B4E4F13A2BB1819D00CFC134 /* Project object */ = {
+		B4E4F1682BB187FF00CFC134 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					B4E4F1422BB1819D00CFC134 = {
+					B4E4F1702BB187FF00CFC134 = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					B4E4F14C2BB1819D00CFC134 = {
+					B4E4F17A2BB1880000CFC134 = {
 						CreatedOnToolsVersion = 15.2;
-						LastSwiftMigration = 1520;
 					};
 				};
 			};
-			buildConfigurationList = B4E4F13D2BB1819D00CFC134 /* Build configuration list for PBXProject "SurveyData" */;
+			buildConfigurationList = B4E4F16B2BB187FF00CFC134 /* Build configuration list for PBXProject "SurveyAPI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -187,26 +161,26 @@
 				en,
 				Base,
 			);
-			mainGroup = B4E4F1392BB1819D00CFC134;
-			productRefGroup = B4E4F1442BB1819D00CFC134 /* Products */;
+			mainGroup = B4E4F1672BB187FF00CFC134;
+			productRefGroup = B4E4F1722BB187FF00CFC134 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4E4F1422BB1819D00CFC134 /* SurveyData */,
-				B4E4F14C2BB1819D00CFC134 /* SurveyDataTests */,
+				B4E4F1702BB187FF00CFC134 /* SurveyAPI */,
+				B4E4F17A2BB1880000CFC134 /* SurveyAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B4E4F1412BB1819D00CFC134 /* Resources */ = {
+		B4E4F16F2BB187FF00CFC134 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4E4F14B2BB1819D00CFC134 /* Resources */ = {
+		B4E4F1792BB1880000CFC134 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,37 +190,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B4E4F13F2BB1819D00CFC134 /* Sources */ = {
+		B4E4F16D2BB187FF00CFC134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E4F1612BB1822400CFC134 /* Answer.swift in Sources */,
-				B4E4F1482BB1819D00CFC134 /* SurveyData.docc in Sources */,
-				B4E4F15F2BB181C500CFC134 /* Question.swift in Sources */,
+				B4E4F1762BB187FF00CFC134 /* SurveyAPI.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4E4F1492BB1819D00CFC134 /* Sources */ = {
+		B4E4F1772BB1880000CFC134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E4F1642BB1838100CFC134 /* QuestionTests.swift in Sources */,
-				B4E4F1662BB186B800CFC134 /* AnswerTests.swift in Sources */,
+				B4E4F1812BB1880000CFC134 /* SurveyAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B4E4F1502BB1819D00CFC134 /* PBXTargetDependency */ = {
+		B4E4F17E2BB1880000CFC134 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B4E4F1422BB1819D00CFC134 /* SurveyData */;
-			targetProxy = B4E4F14F2BB1819D00CFC134 /* PBXContainerItemProxy */;
+			target = B4E4F1702BB187FF00CFC134 /* SurveyAPI */;
+			targetProxy = B4E4F17D2BB1880000CFC134 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		B4E4F1552BB1819D00CFC134 /* Debug */ = {
+		B4E4F1832BB1880000CFC134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -312,7 +283,7 @@
 			};
 			name = Debug;
 		};
-		B4E4F1562BB1819D00CFC134 /* Release */ = {
+		B4E4F1842BB1880000CFC134 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -371,7 +342,7 @@
 			};
 			name = Release;
 		};
-		B4E4F1582BB1819D00CFC134 /* Debug */ = {
+		B4E4F1862BB1880000CFC134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -394,7 +365,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyData;
+				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -403,7 +374,7 @@
 			};
 			name = Debug;
 		};
-		B4E4F1592BB1819D00CFC134 /* Release */ = {
+		B4E4F1872BB1880000CFC134 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -426,7 +397,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyData;
+				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -435,36 +406,33 @@
 			};
 			name = Release;
 		};
-		B4E4F15B2BB1819D00CFC134 /* Debug */ = {
+		B4E4F1892BB1880000CFC134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W5F4T8BUBL;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyDataTests;
+				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B4E4F15C2BB1819D00CFC134 /* Release */ = {
+		B4E4F18A2BB1880000CFC134 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W5F4T8BUBL;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyDataTests;
+				PRODUCT_BUNDLE_IDENTIFIER = DomBabic.SurveyAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -475,34 +443,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4E4F13D2BB1819D00CFC134 /* Build configuration list for PBXProject "SurveyData" */ = {
+		B4E4F16B2BB187FF00CFC134 /* Build configuration list for PBXProject "SurveyAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4E4F1552BB1819D00CFC134 /* Debug */,
-				B4E4F1562BB1819D00CFC134 /* Release */,
+				B4E4F1832BB1880000CFC134 /* Debug */,
+				B4E4F1842BB1880000CFC134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4E4F1572BB1819D00CFC134 /* Build configuration list for PBXNativeTarget "SurveyData" */ = {
+		B4E4F1852BB1880000CFC134 /* Build configuration list for PBXNativeTarget "SurveyAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4E4F1582BB1819D00CFC134 /* Debug */,
-				B4E4F1592BB1819D00CFC134 /* Release */,
+				B4E4F1862BB1880000CFC134 /* Debug */,
+				B4E4F1872BB1880000CFC134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4E4F15A2BB1819D00CFC134 /* Build configuration list for PBXNativeTarget "SurveyDataTests" */ = {
+		B4E4F1882BB1880000CFC134 /* Build configuration list for PBXNativeTarget "SurveyAPITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4E4F15B2BB1819D00CFC134 /* Debug */,
-				B4E4F15C2BB1819D00CFC134 /* Release */,
+				B4E4F1892BB1880000CFC134 /* Debug */,
+				B4E4F18A2BB1880000CFC134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B4E4F13A2BB1819D00CFC134 /* Project object */;
+	rootObject = B4E4F1682BB187FF00CFC134 /* Project object */;
 }
