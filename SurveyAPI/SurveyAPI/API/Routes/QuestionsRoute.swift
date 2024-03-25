@@ -8,11 +8,15 @@
 import Foundation
 import SurveyData
 
+/// Route used to fetch questions and post question answers.
 enum QuestionsRoute: ApiRouteProtocol {
     
+    /// JSONEncoder used to encode body data.
     static let encoder = JSONEncoder()
     
+    /// Route used when fetching questions data.
     case getQuestions
+    /// Route used when posting question answer.
     case postQuestion(answer: Answer)
     
     var method: HttpMethod {

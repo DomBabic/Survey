@@ -69,7 +69,7 @@ final class NetworkServiceTests: XCTestCase {
             case .keyNotFound(let key, _):
                 XCTAssertEqual(key.stringValue, "question")
             default:
-                XCTFail("Found unexpected key, expected `description`.")
+                XCTFail("Found unexpected key, expected `question`.")
             }
         }
     }
