@@ -9,7 +9,7 @@ import Foundation
 import SurveyData
 
 /// Route used to fetch questions and post question answers.
-enum QuestionsRoute: ApiRouteProtocol {
+public enum QuestionsRoute: ApiRouteProtocol {
     
     /// JSONEncoder used to encode body data.
     static let encoder = JSONEncoder()
@@ -19,7 +19,7 @@ enum QuestionsRoute: ApiRouteProtocol {
     /// Route used when posting question answer.
     case postQuestion(answer: Answer)
     
-    var method: HttpMethod {
+    public var method: HttpMethod {
         switch self {
         case .getQuestions:
             return .GET
@@ -28,7 +28,7 @@ enum QuestionsRoute: ApiRouteProtocol {
         }
     }
     
-    var path: String {
+    public var path: String {
         switch self {
         case .getQuestions:
             return "questions"
@@ -37,13 +37,13 @@ enum QuestionsRoute: ApiRouteProtocol {
         }
     }
     
-    var query: QueryParameters? { nil }
+    public var query: QueryParameters? { nil }
     
-    var headers: [HttpHeader] {
+    public var headers: [HttpHeader] {
         return defaultHeaders
     }
     
-    var body: Data? {
+    public var body: Data? {
         switch self {
         case .getQuestions:
             return nil
