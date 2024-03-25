@@ -22,6 +22,7 @@
 		B4E4F2042BB1AD9D00CFC134 /* SurveyAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F2012BB1AD9D00CFC134 /* SurveyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4E4F2052BB1AD9D00CFC134 /* SurveyData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F2022BB1AD9D00CFC134 /* SurveyData.framework */; };
 		B4E4F2062BB1AD9D00CFC134 /* SurveyData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F2022BB1AD9D00CFC134 /* SurveyData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4E4F2092BB1AE7100CFC134 /* Task+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F2082BB1AE7100CFC134 /* Task+Retry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		B4E4F1FE2BB1A74100CFC134 /* View+NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationRoute.swift"; sourceTree = "<group>"; };
 		B4E4F2012BB1AD9D00CFC134 /* SurveyAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SurveyAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E4F2022BB1AD9D00CFC134 /* SurveyData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SurveyData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E4F2082BB1AE7100CFC134 /* Task+Retry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Retry.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 		B4E4F1FD2BB1A72A00CFC134 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B4E4F2082BB1AE7100CFC134 /* Task+Retry.swift */,
 				B4E4F1FE2BB1A74100CFC134 /* View+NavigationRoute.swift */,
 			);
 			path = Extensions;
@@ -346,6 +349,7 @@
 				B4E4F1FF2BB1A74100CFC134 /* View+NavigationRoute.swift in Sources */,
 				B4E4F1FA2BB19FEC00CFC134 /* SurveyViewModel.swift in Sources */,
 				B4E4F1FC2BB1A62200CFC134 /* SurveyAppRoute.swift in Sources */,
+				B4E4F2092BB1AE7100CFC134 /* Task+Retry.swift in Sources */,
 				B4E4F1C02BB1978700CFC134 /* SurveyApp.swift in Sources */,
 				B4E4F1F82BB19FB300CFC134 /* SurveyView.swift in Sources */,
 				B4E4F1EB2BB197A300CFC134 /* IntroView.swift in Sources */,

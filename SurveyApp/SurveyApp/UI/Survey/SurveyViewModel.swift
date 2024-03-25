@@ -7,18 +7,57 @@
 
 import Foundation
 import Combine
+import SurveyAPI
+import SurveyData
 
 final class SurveyViewModel: ObservableObject {
     
-    var session: URLSession
+    private var cancellables = Set<AnyCancellable>()
     
-    init(session: URLSession = .shared) {
-        self.session = session
+    var networkService: NetworkServiceProtocol
+    
+    var maxRetries = 3
+    
+    @Published var questions: [Question] = []
+    
+    @Published var errorCount = 0
+    @Published var errorShown = false
+    
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
+        self.networkService = networkService
         
         setupBinding()
     }
     
     private func setupBinding() {
+        $errorCount
+            .map { [weak self] count in
+                return count == self?.maxRetries
+            }
+            .sink { [weak self] value in
+                self?.errorShown = value
+            }
+            .store(in: &cancellables)
         
+    }
+    
+    @MainActor
+    func loadQuestions() async {
+        resetErrorCount()
+        
+        do {
+            let route = try QuestionsRoute.getQuestions.apiURL()
+            let request = URLRequest(url: route)
+            let data: [Question] = try await networkService.request(request)
+            self.questions = data.sorted { $0.id < $1.id }
+        } catch {
+            errorCount += 1
+        }
+    }
+    
+    private func resetErrorCount() {
+        if errorCount == maxRetries {
+            errorCount = 0
+        }
     }
 }
