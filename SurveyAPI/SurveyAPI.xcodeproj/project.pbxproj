@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4B794D92BB2178A007DD9F2 /* SurveyData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B794D82BB2178A007DD9F2 /* SurveyData.framework */; };
+		B4B794DA2BB2178A007DD9F2 /* SurveyData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4B794D82BB2178A007DD9F2 /* SurveyData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4E4F1762BB187FF00CFC134 /* SurveyAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1752BB187FF00CFC134 /* SurveyAPI.docc */; };
 		B4E4F17C2BB1880000CFC134 /* SurveyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4F1712BB187FF00CFC134 /* SurveyAPI.framework */; };
 		B4E4F1812BB1880000CFC134 /* SurveyAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1802BB1880000CFC134 /* SurveyAPITests.swift */; };
@@ -38,7 +40,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B4B794DB2BB2178A007DD9F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4B794DA2BB2178A007DD9F2 /* SurveyData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B4B794D42BB21710007DD9F2 /* SurveyData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SurveyData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B794D82BB2178A007DD9F2 /* SurveyData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SurveyData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E4F1712BB187FF00CFC134 /* SurveyAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SurveyAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E4F1742BB187FF00CFC134 /* SurveyAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurveyAPI.h; sourceTree = "<group>"; };
 		B4E4F1752BB187FF00CFC134 /* SurveyAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SurveyAPI.docc; sourceTree = "<group>"; };
@@ -66,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B794D92BB2178A007DD9F2 /* SurveyData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +99,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4B794D32BB21710007DD9F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4B794D82BB2178A007DD9F2 /* SurveyData.framework */,
+				B4B794D42BB21710007DD9F2 /* SurveyData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B4E4F1672BB187FF00CFC134 = {
 			isa = PBXGroup;
 			children = (
 				B4E4F1732BB187FF00CFC134 /* SurveyAPI */,
 				B4E4F17F2BB1880000CFC134 /* SurveyAPITests */,
 				B4E4F1722BB187FF00CFC134 /* Products */,
+				B4B794D32BB21710007DD9F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,6 +261,7 @@
 				B4E4F16D2BB187FF00CFC134 /* Sources */,
 				B4E4F16E2BB187FF00CFC134 /* Frameworks */,
 				B4E4F16F2BB187FF00CFC134 /* Resources */,
+				B4B794DB2BB2178A007DD9F2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

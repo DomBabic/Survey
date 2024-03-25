@@ -14,6 +14,11 @@ public struct Answer: Codable {
     /// String representing the answer to the question with `id`.
     public let answer: String
     
+    public init(id: Int, answer: String) {
+        self.id = id
+        self.answer = answer
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id, answer
     }

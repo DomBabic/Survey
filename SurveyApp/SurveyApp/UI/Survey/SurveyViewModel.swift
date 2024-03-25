@@ -21,6 +21,10 @@ final class SurveyViewModel: ObservableObject {
     @Published var questions: [Question] = []
     @Published var questionsAnswered: [Int] = []
     
+    @Published var answeredCount: String?
+    @Published var index = 0
+    @Published var questionIndex: String?
+    
     @Published var errorCount = 0
     @Published var errorShown = false
     
@@ -40,6 +44,29 @@ final class SurveyViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
+        $questionsAnswered
+            .combineLatest($questions) { "Answered \($0.count) of \($1.count)" }
+            .sink { [weak self] count in
+                self?.answeredCount = count
+            }
+            .store(in: &cancellables)
+        
+        $index
+            .combineLatest($questions) { "Question \($0 + 1) of \($1.count)"}
+            .sink { [weak self] count in
+                self?.questionIndex = count
+            }
+            .store(in: &cancellables)
+    }
+    
+    func incrementIndex() {
+        guard index < questions.count - 1 else { return }
+        index += 1
+    }
+    
+    func decrementIndex() {
+        guard index > 0 else { return }
+        index -= 1
     }
     
     @MainActor
