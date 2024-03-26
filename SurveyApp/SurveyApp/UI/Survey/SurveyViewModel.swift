@@ -13,11 +13,22 @@ import SwiftUI
 
 final class SurveyViewModel: ObservableObject {
     
+    struct Constants {
+        let retries: Int
+        let interval: TimeInterval
+        
+        init(retries: Int = 3, interval: TimeInterval = 3) {
+            self.retries = retries
+            self.interval = interval
+        }
+    }
+    
     private var cancellables = Set<AnyCancellable>()
     
     var networkService: NetworkServiceProtocol
     
-    var maxRetries = 3
+    var maxRetries: Int
+    var timerInterval: TimeInterval
     
     @Published var errorCount = 0
     
@@ -33,9 +44,11 @@ final class SurveyViewModel: ObservableObject {
     @Published var surveyResult: SurveyResult?
     
     private var timer: Timer?
-    private var timerInterval: TimeInterval = 3
     
-    init(networkService: NetworkServiceProtocol = NetworkService()) {
+    init(constants: Constants = .init(),
+         networkService: NetworkServiceProtocol = NetworkService()) {
+        self.maxRetries = constants.retries
+        self.timerInterval = constants.interval
         self.networkService = networkService
         
         setupBinding()
@@ -54,7 +67,9 @@ final class SurveyViewModel: ObservableObject {
             .store(in: &cancellables)
         
         $questionsAnswered
-            .combineLatest($questions) { "Answered \($0.count) of \($1.count)" }
+            .combineLatest($questions)
+            .filter { !$0.1.isEmpty }
+            .map { "Answered \($0.0.count) of \($0.1.count)" }
             .sink { [weak self] count in
                 self?.answeredCount = count
             }
