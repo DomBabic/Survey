@@ -19,16 +19,17 @@ final class SurveyViewModel: ObservableObject {
     
     var maxRetries = 3
     
+    @Published var errorCount = 0
+    
     @Published var questions: [Question] = []
     @Published var questionsAnswered: [Int] = []
     
-    @Published var answeredCount: String?
     @Published var index = 0
+    
+    @Published var answeredCount: String?
     @Published var questionIndex: String?
     
-    @Published var errorCount = 0
-    @Published var errorShown = false
-    
+    @Published var surveyState: SurveyViewState = .loading
     @Published var surveyResult: SurveyResult?
     
     private var timer: Timer?
@@ -46,7 +47,9 @@ final class SurveyViewModel: ObservableObject {
                 return count == self?.maxRetries
             }
             .sink { [weak self] value in
-                self?.errorShown = value
+                if value {
+                    self?.surveyState = .error
+                }
             }
             .store(in: &cancellables)
         
@@ -58,7 +61,9 @@ final class SurveyViewModel: ObservableObject {
             .store(in: &cancellables)
         
         $index
-            .combineLatest($questions) { "Question \($0 + 1) of \($1.count)"}
+            .combineLatest($questions)
+            .filter { !$0.1.isEmpty }
+            .map { "Question \($0.0 + 1) of \($0.1.count)" }
             .sink { [weak self] count in
                 self?.questionIndex = count
             }
@@ -76,17 +81,23 @@ final class SurveyViewModel: ObservableObject {
     }
     
     @MainActor
-    func loadQuestions() async {
+    func loadQuestions() async throws {
         resetErrorCount()
+        
+        surveyState = .loading
         
         do {
             let route = try QuestionsRoute.getQuestions.apiURL()
             let request = URLRequest(url: route)
             let data: [Question] = try await networkService.request(request)
+            
+            try? await Task.sleep(nanoseconds: 1_000_000_000)
             self.questions = data.sorted { $0.id < $1.id }
             errorCount = 0
-        } catch {
+            surveyState = .loaded
+        } catch let error {
             errorCount += 1
+            throw error
         }
     }
     
