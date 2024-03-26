@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B45474FF2BB211B900784004 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45474FE2BB211B900784004 /* AnswerView.swift */; };
+		B454A0522BB2A476004F2CC6 /* SurveyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454A0512BB2A476004F2CC6 /* SurveyResult.swift */; };
 		B4E4F1C02BB1978700CFC134 /* SurveyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1BF2BB1978700CFC134 /* SurveyApp.swift */; };
 		B4E4F1C42BB1978800CFC134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E4F1C32BB1978800CFC134 /* Assets.xcassets */; };
 		B4E4F1C72BB1978800CFC134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E4F1C62BB1978800CFC134 /* Preview Assets.xcassets */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		B45474FE2BB211B900784004 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		B454A0512BB2A476004F2CC6 /* SurveyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResult.swift; sourceTree = "<group>"; };
 		B4E4F1BC2BB1978700CFC134 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E4F1BF2BB1978700CFC134 /* SurveyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApp.swift; sourceTree = "<group>"; };
 		B4E4F1C32BB1978800CFC134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 				B45474FE2BB211B900784004 /* AnswerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B454A0502BB2A467004F2CC6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B454A0512BB2A476004F2CC6 /* SurveyResult.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		B4E4F1B32BB1978700CFC134 = {
@@ -201,6 +211,7 @@
 		B4E4F1F62BB19F8E00CFC134 /* Survey */ = {
 			isa = PBXGroup;
 			children = (
+				B454A0502BB2A467004F2CC6 /* Enums */,
 				B45474FD2BB211A800784004 /* Views */,
 				B4E4F1F92BB19FEC00CFC134 /* SurveyViewModel.swift */,
 				B4E4F1F72BB19FB300CFC134 /* SurveyView.swift */,
@@ -362,6 +373,7 @@
 				B4E4F1FC2BB1A62200CFC134 /* SurveyAppRoute.swift in Sources */,
 				B4E4F2092BB1AE7100CFC134 /* Task+Retry.swift in Sources */,
 				B4E4F1C02BB1978700CFC134 /* SurveyApp.swift in Sources */,
+				B454A0522BB2A476004F2CC6 /* SurveyResult.swift in Sources */,
 				B4E4F1F82BB19FB300CFC134 /* SurveyView.swift in Sources */,
 				B45474FF2BB211B900784004 /* AnswerView.swift in Sources */,
 				B4E4F1EB2BB197A300CFC134 /* IntroView.swift in Sources */,
