@@ -16,6 +16,7 @@
 		B454A05D2BB2BC00004F2CC6 /* Test+RetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454A05C2BB2BC00004F2CC6 /* Test+RetryTests.swift */; };
 		B454A0622BB2C254004F2CC6 /* SurveyResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454A0612BB2C254004F2CC6 /* SurveyResultTests.swift */; };
 		B454A0642BB2C367004F2CC6 /* SurveyViewStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454A0632BB2C367004F2CC6 /* SurveyViewStateTests.swift */; };
+		B454A0662BB2C472004F2CC6 /* SurveyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454A0652BB2C472004F2CC6 /* SurveyViewModelTests.swift */; };
 		B454A0692BB2C4BE004F2CC6 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454A0682BB2C4BE004F2CC6 /* NetworkServiceMock.swift */; };
 		B4E4F1C02BB1978700CFC134 /* SurveyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4F1BF2BB1978700CFC134 /* SurveyApp.swift */; };
 		B4E4F1C42BB1978800CFC134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E4F1C32BB1978800CFC134 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		B454A05C2BB2BC00004F2CC6 /* Test+RetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test+RetryTests.swift"; sourceTree = "<group>"; };
 		B454A0612BB2C254004F2CC6 /* SurveyResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultTests.swift; sourceTree = "<group>"; };
 		B454A0632BB2C367004F2CC6 /* SurveyViewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewStateTests.swift; sourceTree = "<group>"; };
+		B454A0652BB2C472004F2CC6 /* SurveyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModelTests.swift; sourceTree = "<group>"; };
 		B454A0682BB2C4BE004F2CC6 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		B4E4F1BC2BB1978700CFC134 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E4F1BF2BB1978700CFC134 /* SurveyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApp.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				B454A0602BB2C242004F2CC6 /* Enums */,
+				B454A0652BB2C472004F2CC6 /* SurveyViewModelTests.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				B454A0692BB2C4BE004F2CC6 /* NetworkServiceMock.swift in Sources */,
 				B454A0622BB2C254004F2CC6 /* SurveyResultTests.swift in Sources */,
 				B454A05D2BB2BC00004F2CC6 /* Test+RetryTests.swift in Sources */,
+				B454A0662BB2C472004F2CC6 /* SurveyViewModelTests.swift in Sources */,
 				B454A0642BB2C367004F2CC6 /* SurveyViewStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
