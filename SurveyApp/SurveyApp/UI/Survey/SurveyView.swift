@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SurveyData
 
 struct SurveyView: View {
     
@@ -13,10 +14,11 @@ struct SurveyView: View {
     
     var body: some View {
         VStack {
-            questionIndex
+            answeredCount
             
             content
         }
+        .navigationTitle(viewModel.questionIndex ?? "Survey")
         .onAppear {
             Task.retry(maxRetryCount: viewModel.maxRetries) {
                 await viewModel.loadQuestions()
@@ -25,10 +27,10 @@ struct SurveyView: View {
     }
     
     @ViewBuilder
-    var questionIndex: some View {
-        if let text = viewModel.questionIndex {
+    var answeredCount: some View {
+        if let text = viewModel.answeredCount {
             Text(text)
-                .font(.body)
+                .font(.footnote)
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
                 .padding(.vertical, 12)
@@ -66,14 +68,20 @@ struct SurveyView: View {
                         AnswerView(question: question)
                             .environmentObject(viewModel)
                             .containerRelativeFrame(.horizontal)
-                            .id(viewModel.questions.firstIndex(where: { $0.id == question.id }))
+                            .id(question.question)
                     }
                 }
             }
             .scrollTargetBehavior(.paging)
             .onChange(of: viewModel.index, initial: false) { (_, index) in
                 withAnimation {
-                    reader.scrollTo(index, anchor: .center)
+                    guard viewModel.questions.indices.contains(index) else {
+                        return
+                    }
+                    
+                    let question = viewModel.questions[index]
+                    
+                    reader.scrollTo(question.question, anchor: .center)
                 }
             }
         }
