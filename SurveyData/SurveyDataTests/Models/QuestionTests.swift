@@ -50,4 +50,10 @@ final class QuestionTests: XCTestCase {
         }
     }
 
+    func testInit() {
+        let q = Question(id: 0, question: "Test")
+        
+        XCTAssertEqual(q.id, 0)
+        XCTAssertEqual(q.question, "Test")
+    }
 }

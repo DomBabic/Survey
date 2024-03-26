@@ -23,4 +23,10 @@ final class AnswerTests: XCTestCase {
         XCTAssertTrue(string?.contains("Blue") ?? false)
     }
 
+    func testInit() {
+        let q = Answer(id: 0, answer: "Test")
+        
+        XCTAssertEqual(q.id, 0)
+        XCTAssertEqual(q.answer, "Test")
+    }
 }
