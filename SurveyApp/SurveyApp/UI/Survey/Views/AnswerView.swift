@@ -12,6 +12,8 @@ struct AnswerView: View {
     
     @EnvironmentObject var viewModel: SurveyViewModel
     
+    @FocusState var focused: Bool
+    
     var question: Question
     
     var id: Int {
@@ -54,6 +56,7 @@ struct AnswerView: View {
             .background(inputBorder)
             .disabled(didSubmit)
             .padding(.horizontal, 1)
+            .focused($focused)
     }
     
     var inputBorder: some View {
@@ -65,6 +68,7 @@ struct AnswerView: View {
         Button {
             Task {
                 await viewModel.submit(answer: .init(id: id, answer: answer))
+                focused = false
             }
         } label: {
             submitText
