@@ -35,6 +35,7 @@ struct AnswerView: View {
             submitButton
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.bottom, 8)
     }
     
     var titleText: some View {

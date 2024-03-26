@@ -20,6 +20,7 @@ struct IntroView: View {
             getStartedButton
         }
         .padding(.horizontal, 24)
+        .padding(.bottom, 8)
     }
     
     var logo: some View {
