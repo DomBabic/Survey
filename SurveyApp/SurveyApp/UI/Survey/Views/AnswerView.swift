@@ -10,11 +10,13 @@ import SurveyData
 
 struct AnswerView: View {
     
+    var question: Question
+    
     @EnvironmentObject var viewModel: SurveyViewModel
     
     @FocusState var focused: Bool
     
-    var question: Question
+    @State var answer = ""
     
     var id: Int {
         question.id
@@ -24,7 +26,10 @@ struct AnswerView: View {
         viewModel.questionsAnswered.contains(id)
     }
     
-    @State var answer = ""
+    var disableButton: Bool {
+        didSubmit || answer.isEmpty
+    }
+    
     
     var body: some View {
         VStack(spacing: 24) {
@@ -77,10 +82,10 @@ struct AnswerView: View {
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
-        .background(didSubmit ? Color.gray.opacity(0.5) : Color.blue)
+        .background(disableButton ? Color.gray.opacity(0.5) : Color.blue)
         .clipShape(Capsule())
         .contentShape(Rectangle())
-        .disabled(didSubmit)
+        .disabled(disableButton)
     }
     
     var submitText: some View {
