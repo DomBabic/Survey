@@ -68,8 +68,9 @@ struct AnswerView: View {
         Button {
             Task {
                 await viewModel.submit(answer: .init(id: id, answer: answer))
-                focused = false
             }
+            
+            focused = false
         } label: {
             submitText
         }
@@ -78,6 +79,7 @@ struct AnswerView: View {
         .padding(.vertical, 12)
         .background(didSubmit ? Color.gray.opacity(0.5) : Color.blue)
         .clipShape(Capsule())
+        .contentShape(Rectangle())
         .disabled(didSubmit)
     }
     
