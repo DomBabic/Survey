@@ -14,18 +14,42 @@ struct SurveyView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                answeredCount
-                
-                content
-            }
+            content
             
             toastHolder
         }
         .navigationTitle(viewModel.questionIndex ?? "Survey")
-        .onAppear {
+        .task {
             Task.retry(maxRetryCount: viewModel.maxRetries) {
-                await viewModel.loadQuestions()
+                try await viewModel.loadQuestions()
+            }
+        }
+    }
+    
+    @ViewBuilder
+    var content: some View {
+        switch viewModel.surveyState {
+        case .loading:
+            LoadingView()
+        case .loaded:
+            surveyView
+        case .error:
+            errorView
+        }
+    }
+    
+    var surveyView: some View {
+        VStack {
+            answeredCount
+            
+            pagerHolder
+        }
+    }
+    
+    var errorView: some View {
+        ErrorView {
+            Task.retry(maxRetryCount: viewModel.maxRetries) {
+                try await viewModel.loadQuestions()
             }
         }
     }
@@ -42,17 +66,17 @@ struct SurveyView: View {
         }
     }
     
-    var content: some View {
+    var pagerHolder: some View {
         HStack {
-            previousButton
+            pagerButtonPrevious
             
             pager
             
-            nextButton
+            pagerButtonNext
         }
     }
     
-    var previousButton: some View {
+    var pagerButtonPrevious: some View {
         Button {
             viewModel.decrementIndex()
         } label: {
@@ -92,7 +116,7 @@ struct SurveyView: View {
         }
     }
     
-    var nextButton: some View {
+    var pagerButtonNext: some View {
         Button {
             viewModel.incrementIndex()
         } label: {
