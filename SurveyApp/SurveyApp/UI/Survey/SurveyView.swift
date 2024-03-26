@@ -58,6 +58,7 @@ struct SurveyView: View {
         }
         .disabled(viewModel.index == 0)
         .tint(viewModel.index == 0 ? Color.gray : Color.black)
+        .padding(.leading, 8)
     }
     
     var pager: some View {
@@ -97,6 +98,7 @@ struct SurveyView: View {
         }
         .disabled(viewModel.index == viewModel.questions.count - 1)
         .tint(viewModel.index == viewModel.questions.count - 1 ? Color.gray : Color.black)
+        .padding(.trailing, 8)
     }
 }
 
