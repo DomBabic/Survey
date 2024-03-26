@@ -13,10 +13,14 @@ struct SurveyView: View {
     @StateObject var viewModel: SurveyViewModel = .init()
     
     var body: some View {
-        VStack {
-            answeredCount
+        ZStack {
+            VStack {
+                answeredCount
+                
+                content
+            }
             
-            content
+            toastHolder
         }
         .navigationTitle(viewModel.questionIndex ?? "Survey")
         .onAppear {
@@ -99,6 +103,64 @@ struct SurveyView: View {
         .disabled(viewModel.index == viewModel.questions.count - 1)
         .tint(viewModel.index == viewModel.questions.count - 1 ? Color.gray : Color.black)
         .padding(.trailing, 8)
+    }
+    
+    var toastHolder: some View {
+        VStack {
+            toast
+            
+            Spacer()
+        }
+    }
+    
+    @ViewBuilder
+    var toast: some View {
+        if let result = viewModel.surveyResult {
+            HStack {
+                Text(result.title)
+                    .font(.callout)
+                    .foregroundStyle(Color.white)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                if case .failure(let answer) = result {
+                    Button {
+                        viewModel.resetResult()
+                        
+                        Task {
+                            try? await Task.sleep(nanoseconds: 1_000_000_000)
+                            
+                            await viewModel.submit(answer: answer)
+                            
+                            resignResponder()
+                        }
+                    } label: {
+                        Text("Retry")
+                            .underline()
+                            .font(.callout)
+                            .foregroundStyle(Color.white)
+                            .fixedSize(horizontal: true, vertical: false)
+                    }
+                } else {
+                    Spacer()
+                }
+            }
+            .padding(.horizontal, 12)
+            .frame(minHeight: 50)
+            .background(result.background)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .padding(.horizontal, 24)
+            .padding(.bottom, 4)
+            .animation(.easeInOut(duration: 0.5), value: viewModel.surveyResult)
+            .transition(.move(edge: .top).combined(with: .opacity))
+        }
+    }
+    
+    private func resignResponder() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                        to: nil,
+                                        from: nil,
+                                        for: nil)
     }
 }
 
