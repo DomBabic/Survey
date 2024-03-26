@@ -9,10 +9,14 @@ import Foundation
 import SwiftUI
 import SurveyData
 
+/// Enum used to indicate outcome of perform network requests when submitting answers to questions.
 enum SurveyResult: Equatable {
+    /// Represents a success state, when network request was completed without an error.
     case success
+    /// Represents a failure state, when network request was completed with an error. Contains `Answer` associated value.
     case failure(answer: Answer)
     
+    /// String used as title for the toast displayed in the UI.
     var title: String {
         switch self {
         case .success:
@@ -22,6 +26,7 @@ enum SurveyResult: Equatable {
         }
     }
     
+    /// Color used for the toast background.
     var background: Color {
         switch self {
         case .success:
