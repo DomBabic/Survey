@@ -17,7 +17,7 @@ extension Task where Failure == Error {
             let oneSecond = TimeInterval(1_000_000_000)
             let delay = UInt64(oneSecond * retryDelay)
             
-            for _ in 0..<maxRetryCount {
+            for _ in 1..<maxRetryCount {
                 do {
                     return try await operation()
                 } catch {
