@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import SurveyAPI
 import SurveyData
+import SwiftUI
 
 final class SurveyViewModel: ObservableObject {
     
@@ -27,6 +28,11 @@ final class SurveyViewModel: ObservableObject {
     
     @Published var errorCount = 0
     @Published var errorShown = false
+    
+    @Published var surveyResult: SurveyResult?
+    
+    private var timer: Timer?
+    private var timerInterval: TimeInterval = 3
     
     init(networkService: NetworkServiceProtocol = NetworkService()) {
         self.networkService = networkService
@@ -86,17 +92,43 @@ final class SurveyViewModel: ObservableObject {
     
     @MainActor
     func submit(answer: Answer) async {
-        resetErrorCount()
-        
         do {
             let route = try QuestionsRoute.postQuestion(answer: answer).apiURL()
             let request = URLRequest(url: route)
             try await networkService.completableRequest(request)
             questionsAnswered.append(answer.id)
-            errorCount = 0
+            
+            withAnimation {
+                surveyResult = .success
+            }
         } catch {
-            errorCount += 1
+            withAnimation {
+                surveyResult = .failure(answer: answer)
+            }
         }
+        
+        setTimer()
+    }
+    
+    private func setTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: false) { [weak self] timer in
+            guard let self = self else { return }
+            
+            self.resetResult()
+        }
+    }
+    
+    func resetResult() {
+        stopTimer()
+        
+        withAnimation {
+            self.surveyResult = nil
+        }
+    }
+    
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
     }
     
     private func resetErrorCount() {
