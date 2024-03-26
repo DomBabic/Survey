@@ -123,7 +123,7 @@ final class SurveyViewModel: ObservableObject {
     
     private func setTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: false) { [weak self] timer in
-            guard let self = self else { return }
+            guard let self else { return }
             
             self.resetResult()
         }
