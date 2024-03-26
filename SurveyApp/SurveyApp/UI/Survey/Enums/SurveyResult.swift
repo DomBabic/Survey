@@ -16,9 +16,9 @@ enum SurveyResult: Equatable {
     var title: String {
         switch self {
         case .success:
-            return "Answer submitted!"
+            return "Success!"
         case .failure:
-            return "Failed to submit the answer."
+            return "Failure...."
         }
     }
     
